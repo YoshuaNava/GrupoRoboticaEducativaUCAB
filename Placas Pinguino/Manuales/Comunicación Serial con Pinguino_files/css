@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Droid Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Droid Serif Italic'), local('DroidSerif-Italic'), url(http://themes.googleusercontent.com/static/fonts/droidserif/v4/cj2hUnSRBhwmSPr9kS5899kZXW4sYc4BjuAIFc1SXII.woff) format('woff');
+}

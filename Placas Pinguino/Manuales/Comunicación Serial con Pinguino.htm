@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.trastejant.es/tutoriales/Pinguino/serial.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+				<meta charset="utf-8">
+		<title>Trastejant</title>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="./Comunicación Serial con Pinguino_files/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="./Comunicación Serial con Pinguino_files/social-icons.css" type="text/css" media="screen">
+		
+		<link rel="SHORTCUT ICON" href="http://www.trastejant.es/img/favicon.ico">
+		<!-- ENDS CSS -->	
+		
+		<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<!-- ENDS JS -->
+		
+		<!-- JS -->
+		<script src="./Comunicación Serial con Pinguino_files/cb=gapi.loaded_1" async=""></script><script src="./Comunicación Serial con Pinguino_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./Comunicación Serial con Pinguino_files/platform.js" gapi_processed="true"></script><script id="twitter-wjs" src="./Comunicación Serial con Pinguino_files/widgets.js"></script><script id="facebook-jssdk" src="./Comunicación Serial con Pinguino_files/all.js"></script><script async="" src="./Comunicación Serial con Pinguino_files/analytics.js"></script><script type="text/javascript" src="./Comunicación Serial con Pinguino_files/jquery.min.js"></script>
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/custom.js"></script>
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/slider.js"></script>
+		<script src="./Comunicación Serial con Pinguino_files/slides.min.jquery.js"></script>
+		<script src="./Comunicación Serial con Pinguino_files/quicksand.js"></script>
+		
+		<!-- superfish -->
+		<link rel="stylesheet" media="screen" href="http://www.trastejant.es/css/superfish.css"> 
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/hoverIntent.js"></script>
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/superfish.js"></script>
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/supersubs.js"></script>
+		<!-- ENDS superfish -->
+
+		<!-- poshytip -->
+		<link rel="stylesheet" href="./Comunicación Serial con Pinguino_files/tip-twitter.css" type="text/css">
+		<link rel="stylesheet" href="./Comunicación Serial con Pinguino_files/tip-yellowsimple.css" type="text/css">
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/jquery.poshytip.min.js"></script>
+		<!-- ENDS poshytip -->
+		
+		<!-- Tweet -->
+		<link rel="stylesheet" href="./Comunicación Serial con Pinguino_files/jquery.tweet.css" media="all" type="text/css"> 
+		<script src="./Comunicación Serial con Pinguino_files/jquery.tweet.js" type="text/javascript"></script> 
+		<!-- ENDS Tweet -->
+		
+		<!-- prettyPhoto -->
+		<script type="text/javascript" src="./Comunicación Serial con Pinguino_files/jquery.prettyPhoto.js"></script>
+		<link rel="stylesheet" href="./Comunicación Serial con Pinguino_files/prettyPhoto.css" type="text/css" media="screen">
+		<!-- ENDS prettyPhoto -->
+		
+		<!-- GOOGLE FONTS -->
+		<link href="./Comunicación Serial con Pinguino_files/css" rel="stylesheet" type="text/css">
+		
+		<!-- RESALTADO DE SINTAXIS-->
+		<link type="text/css" rel="stylesheet" href="./Comunicación Serial con Pinguino_files/SyntaxHighlighter.css">
+		<script language="javascript" src="./Comunicación Serial con Pinguino_files/shCore.js"></script>
+	    <script language="javascript" src="./Comunicación Serial con Pinguino_files/shBrushJava.js"></script>	    
+		<script type="text/javascript">
+			window.onload = function() {
+			  dp.SyntaxHighlighter.HighlightAll("code");
+			}
+		</script>
+
+		
+
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46143220-1', 'trastejant.es');
+  ga('send', 'pageview');
+
+</script><style id="poshytip-css-tip-twitter" type="text/css">div.tip-twitter{visibility:hidden;position:absolute;top:0;left:0;}div.tip-twitter table, div.tip-twitter td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;}div.tip-twitter td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:10px;width:10px;overflow:hidden;}div.tip-twitter td.tip-right{background-position:100% 0;}div.tip-twitter td.tip-bottom{background-position:100% 100%;}div.tip-twitter td.tip-left{background-position:0 100%;}div.tip-twitter div.tip-inner{background-position:-10px -10px;}div.tip-twitter div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><style id="poshytip-css-tip-yellowsimple" type="text/css">div.tip-yellowsimple{visibility:hidden;position:absolute;top:0;left:0;}div.tip-yellowsimple table, div.tip-yellowsimple td{margin:0;font-family:inherit;font-size:inherit;font-weight:inherit;font-style:inherit;font-variant:inherit;}div.tip-yellowsimple td.tip-bg-image span{display:block;font:1px/1px sans-serif;height:10px;width:10px;overflow:hidden;}div.tip-yellowsimple td.tip-right{background-position:100% 0;}div.tip-yellowsimple td.tip-bottom{background-position:100% 100%;}div.tip-yellowsimple td.tip-left{background-position:0 100%;}div.tip-yellowsimple div.tip-inner{background-position:-10px -10px;}div.tip-yellowsimple div.tip-arrow{visibility:hidden;position:absolute;overflow:hidden;font:1px/1px sans-serif;}</style><style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+	
+	<body data-twttr-rendered="true" style="background-color: rgb(255, 255, 255);">
+	<!--SCRIPTS SOCIALES-->
+	<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Comunicación Serial con Pinguino_files/dgdTycPTSRj.htm" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./Comunicación Serial con Pinguino_files/dgdTycPTSRj(1).htm" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!---->
+		
+		
+		<div class="espacio"></div>
+
+		<!-- wrapper -->
+		<div class="wrapper">
+		
+			<a href="http://www.trastejant.es/index.php"><img id="logo" src="./Comunicación Serial con Pinguino_files/logo.gif" alt="Trastejant"></a>
+			
+			
+			<!-- nav bar holder -->
+			<div id="nav-bar-holder">
+				<!-- Navigation -->
+				<ul id="nav" class="sf-menu sf-js-enabled sf-shadow">
+					<li><a href="http://www.trastejant.es/index.php">Home</a></li>
+					<li><a href="http://www.trastejant.es/proyectos/">Proyectos</a></li>
+					<li><a href="http://www.trastejant.es/circuitos/">Circuitos</a>
+						<ul style="display: none; visibility: hidden;">
+							<li><a href="http://www.trastejant.es/circuitos/celec.php">Electronica</a></li>
+							<li><a href="http://www.trastejant.es/circuitos/cardu.php">Arduino</a></li>
+							<li><a href="http://www.trastejant.es/circuitos/cpingu.php">Pinguino</a></li>
+							<li><a href="http://www.trastejant.es/circuitos/cpic.php">Microcontroladores</a></li>
+						</ul>
+					</li>
+					<li class="current-menu-item"><a href="http://www.trastejant.es/tutoriales/index.php">Tutoriales</a>
+						<ul style="display: none; visibility: hidden;">
+							<li><a href="http://www.trastejant.es/tutoriales/index.php">Tutoriales</a></li>
+							<li><a href="http://www.trastejant.es/videotutoriales/">videotutoriales</a></li>
+
+						</ul>
+					</li>
+					<li><a href="http://www.trastejant.es/blog/">Blog</a></li>
+					<li><a href="http://www.trastejant.es/descargas.php">Descargas</a></li>
+					<li><a href="http://www.trastejant.es/contact.html">Contacto</a></li>
+				</ul>
+				<!-- ENDS Navigation -->
+				
+				<!-- Social -->
+				<ul class="social">
+					
+					<li><a href="http://www.twitter.com/trastejant" class="poshytip  twitter" title="Siguenos"></a></li>
+					<li><a href="http://www.facebook.com/trastejant" class="poshytip  facebook" title="Enterate de Todo."></a></li>
+				</ul>
+				<!-- ENDS Social -->
+			</div>
+			<!-- ENDS nav bar holder -->
+				
+			<!-- content wrap -->	    	
+	        <div id="content-wrap">
+	        	
+	        	<!-- Page wrap -->
+	        	<div id="page-wrap">
+	        	
+					<div class="page-title"><h1>Comunicación Serial</h1> <span>con Pinguino</span></div>
+					
+
+						
+						
+						<img src="./Comunicación Serial con Pinguino_files/pinguinoTutoCinco.png" alt="tuto" class="alignright">
+						
+						<p>En este tutorial vamos a aprender a comunicarnos con nuestro Pinguno utilizando la conexión serial.</p>	
+
+						<p>Lo primero que tenemos que saber es que realmente no vamos a utilizar comunicación serial, sino CDC. Un  protocolo muy extendido cuya misión es emular este tipo de conexión via USB.</p>
+
+						<p>La forma más simple de este tipo de comunicación es emplenado algún programa tipo hyperterminal(Windows), minicom(linux) o MacWise(MAC) que permite establecer una conexión con los puertos COM (serial)  y recibir información y enviar comandos. Pero también podríamos programar aplicaciones mucho más sofisticadas que por debajo establezcan este tipo de conexión para controlar el Pinguino.</p>
+
+						<p>Las funciones más importantes para manejar estas conexiones son dos: </p>
+						<ul style="margin-left:30px;">
+							<li style="margin-bottom:10px;"><b>byteRecibido = CDC.read(buffer);</b>: Lee los datos recibidos. <i>byteRecibido</i> es una variable tipo char en la que se almacenará el ultimo dato recibido mientras que <i>buffer</i> es un array que actuará cómo buffer para la comunicación.</li>
+							<li><b>CDC.printf("cadena a enviar")</b>: Envia una cadena.</li>
+						</ul>
+					
+					<div class="dp-highlighter"><div class="bar"><div class="tools"><a href="http://www.trastejant.es/tutoriales/Pinguino/serial.html#" onclick="dp.sh.Toolbar.Command(&#39;ViewSource&#39;,this);return false;">view plain</a><a href="http://www.trastejant.es/tutoriales/Pinguino/serial.html#" onclick="dp.sh.Toolbar.Command(&#39;PrintSource&#39;,this);return false;">print</a><a href="http://www.trastejant.es/tutoriales/Pinguino/serial.html#" onclick="dp.sh.Toolbar.Command(&#39;About&#39;,this);return false;">?</a></div></div><ol start="1" class="dp-j"><li class="alt"><span><span class="comment">//creamos&nbsp;una&nbsp;variable&nbsp;&nbsp;para&nbsp;el&nbsp;dato&nbsp;que&nbsp;vamos&nbsp;a&nbsp;querer&nbsp;leer</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span><span class="keyword">char</span><span>&nbsp;dato;&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;<span class="comment">//creamos&nbsp;una&nbsp;variable&nbsp;para&nbsp;la&nbsp;recepción&nbsp;de&nbsp;datos</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;unsigned&nbsp;<span class="keyword">char</span><span>&nbsp;receivedbyte;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;<span class="comment">//Creamos&nbsp;un&nbsp;Array&nbsp;para&nbsp;el&nbsp;buffer&nbsp;de&nbsp;lectura</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;unsigned&nbsp;<span class="keyword">char</span><span>&nbsp;buff[</span><span class="number">64</span><span>];&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;<span class="comment">//definimos&nbsp;&nbsp;la&nbsp;pata&nbsp;7&nbsp;como&nbsp;Led</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;#define&nbsp;led&nbsp;<span class="number">7</span><span>&lt;p&gt;&lt;/p&gt;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;</span></li><li class="alt"><span><span class="keyword">void</span><span>&nbsp;setup(){&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//configuramos&nbsp;el&nbsp;pin&nbsp;7&nbsp;cómo&nbsp;una&nbsp;salida</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;pinMode(led,&nbsp;OUTPUT);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Apagamos&nbsp;el&nbsp;led</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(led7,LOW);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;</span></li><li class=""><span><span class="keyword">void</span><span>&nbsp;loop()&nbsp;{&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Mostramos&nbsp;un&nbsp;mensaje&nbsp;para&nbsp;saber&nbsp;que&nbsp;se&nbsp;ha&nbsp;establecido&nbsp;comunicación</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;CDC.printf(<span class="string">"Listo\r\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//creamos&nbsp;un&nbsp;bucle&nbsp;que&nbsp;se&nbsp;ejecutará&nbsp;&nbsp;mientras&nbsp;no&nbsp;recibamos&nbsp;nada.&nbsp;</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span><span>((receivedbyte&nbsp;=&nbsp;CDC.read(buff))&nbsp;==&nbsp;</span><span class="number">0</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Cuando&nbsp;recibamos&nbsp;algo&nbsp;entraremos&nbsp;aquí</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(receivedbyte&nbsp;&gt;&nbsp;</span><span class="number">0</span><span>){&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//almacenamos&nbsp;en&nbsp;la&nbsp;variable&nbsp;dato&nbsp;el&nbsp;primer&nbsp;valor&nbsp;del&nbsp;array&nbsp;buffer</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dato&nbsp;=&nbsp;buff[<span class="number">0</span><span>];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//si&nbsp;mandamos&nbsp;un&nbsp;dos...</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>(dato&nbsp;==&nbsp;</span><span class="string">'1'</span><span>){&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//encendemos&nbsp;el&nbsp;Led</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(led7,HIGH);&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//Mostramos&nbsp;un&nbsp;mensaje&nbsp;de&nbsp;que&nbsp;lo&nbsp;hemos&nbsp;encendido</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDC.printf(<span class="string">"Led&nbsp;ON\r\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<span class="keyword">else</span><span>&nbsp;</span><span class="keyword">if</span><span>(dato&nbsp;==&nbsp;</span><span class="string">'3'</span><span>){&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//si&nbsp;hemos&nbsp;eviado&nbsp;un&nbsp;0...</span><span>&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//apagamos&nbsp;el&nbsp;led</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;digitalWrite(led,LOW);&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//lo&nbsp;indicamos&nbsp;con&nbsp;un&nbsp;mensaje</span><span>&nbsp;&nbsp;</span></span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CDC.printf(<span class="string">"Led&nbsp;apagado\r\n"</span><span>);&nbsp;&nbsp;</span></span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></li><li class=""><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li class="alt"><span>}&nbsp;&nbsp;</span></li></ol></div><pre name="code" class="java" style="display: none;">						//creamos una variable  para el dato que vamos a querer leer
+						char dato;
+						 
+						 //creamos una variable para la recepción de datos
+						 unsigned char receivedbyte;
+						 
+						 //Creamos un Array para el buffer de lectura
+						 unsigned char buff[64];
+
+						 //definimos  la pata 7 como Led
+						 #define led 7<p></p>
+
+						void setup(){
+						 	
+						 	//configuramos el pin 7 cómo una salida
+							pinMode(led, OUTPUT);
+
+							//Apagamos el led
+							digitalWrite(led7,LOW);
+						 }
+						 
+						void loop() {
+							//Mostramos un mensaje para saber que se ha establecido comunicación
+							CDC.printf("Listo\r\n");
+							 
+							 //creamos un bucle que se ejecutará  mientras no recibamos nada. 
+							while((receivedbyte = CDC.read(buff)) == 0);
+							 
+							 //Cuando recibamos algo entraremos aquí
+							if(receivedbyte &gt; 0){
+
+								//almacenamos en la variable dato el primer valor del array buffer
+								dato = buff[0];						 
+								 
+								//si mandamos un dos...
+								if(dato == '1'){
+									//encendemos el Led
+									digitalWrite(led7,HIGH);
+									//Mostramos un mensaje de que lo hemos encendido
+									CDC.printf("Led ON\r\n");
+
+								 }else if(dato == '3'){
+									 //si hemos eviado un 0...
+									 //apagamos el led
+									 digitalWrite(led,LOW);
+									 //lo indicamos con un mensaje
+									 CDC.printf("Led apagado\r\n");
+								 }
+							 
+							}
+						}
+					</pre>
+							
+					<p>Un par de cosas más a comentar sobre el código.  La primera es el tamaño del buffer, 64bits es el tamaño máximo del paquete que se puede enviar via CDC</p>. 
+
+					<p>Lo que se almacena en dato no es la tecla pulsada, sino su valor ASCII. En el caso del ejemplo es igual  porque coincide el valor de las teclas con su valor en la tabla ASCII, pero  es importante tenerlo en cuenta si vamos a utilizar letras o simbolos.</p>
+
+					<p>los caracteres que vemos despues de cada mensaje mandado (\r\n) son caracteres de escapes equivalentes al retorno de carro (\r) y el salto de linea(\n) estas dos acciones se suceden de forma  automatica cuando pulsamos enter en un procesador de textos, por ejemplo. El cursos vuelve a la posición más a la izquierda (retorno de carro) y baja una linea (salto de linea.)</p>
+
+					<p>El circuito a controlar sería tan simple cómo la placa de Pinguino y un Led con su correspondiente resitencia:</p>
+							<center><a href="./Comunicación Serial con Pinguino_files/serial.png"><img src="./Comunicación Serial con Pinguino_files/serial.png" height="300px"></a></center>
+
+					<p>Ahora que sabemos usar esta conexión podemos crear un pequeño programa que envie los comandos al pulsar un botón, por ejemplo.</p>
+
+					<div class="clear"></div>
+	        	
+	        	</div>
+	        	<!-- ENDS Page wrap -->
+	        	
+	        </div>
+	        <!-- ENDS content wrap -->
+	        
+        </div>
+		<!-- ENDS Wrapper -->
+		
+		<!-- FOOTER -->
+		<div id="footer">
+<div class="footer-wrapper"><!-- footer-cols -->
+	<center>
+<ul id="footer-cols">
+	<!--BOOTON DE FACEBOOK-->
+	<li>
+		<div class="fb-like fb_iframe_widget" data-href="http://www.trastejant.es/tutoriales/Pinguino/serial.html" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2Fwww.trastejant.es%2Ftutoriales%2FPinguino%2Fserial.html&amp;layout=button_count&amp;locale=es_ES&amp;sdk=joey&amp;share=true&amp;show_faces=true"><span style="vertical-align: bottom; width: 175px; height: 20px;"><iframe name="f20ed4158" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Comunicación Serial con Pinguino_files/like.htm" class="" style="border: none; visibility: visible; width: 175px; height: 20px;"></iframe></span></div>
+	</li>
+
+	<!--BOOTON DE TWITTER-->
+	<li>
+		<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Comunicación Serial con Pinguino_files/tweet_button.1397165098.htm" class="twitter-share-button twitter-tweet-button twitter-count-none" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 70px; height: 20px;"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	</li>
+
+	<!--BOOTON DE GOOGLE+-->
+	<li>
+		<!-- Inserta esta etiqueta donde quieras que aparezca Botón +1. -->
+		<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 106px; height: 24px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 106px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 24px;" tabindex="0" vspace="0" width="100%" id="I0_1399061835085" name="I0_1399061835085" src="./Comunicación Serial con Pinguino_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+
+		<!-- Inserta esta etiqueta después de la última etiqueta de Botón +1. -->
+		<script type="text/javascript">
+		  window.___gcfg = {lang: 'es'};
+
+		  (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		    po.src = 'https://apis.google.com/js/platform.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+	</li>
+
+
+</ul>
+</center>
+<!-- ENDS footer-cols -->
+<div id="footer-glare"></div>
+
+</div>
+
+</div>
+
+<!-- ENDS FOOTER -->
+<!-- footer-bottom -->
+<div id="footer-bottom">
+	<center>
+	<div class="bottom-wrapper">
+	<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="./Comunicación Serial con Pinguino_files/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Tutorial</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.trastejant.es/" property="cc:attributionName" rel="cc:attributionURL">http://www.trastejant.es</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Reconocimiento-NoComercial-CompartirIgual 4.0 Internacional License</a>.<br>Creado a partir de la obra en <a xmlns:dct="http://purl.org/dc/terms/" href="http://www.trastejant.es/" rel="dct:source">http://www.trastejant.es</a>.
+	</div></center>
+
+		
+
+
+	</div>
+	<div id="bottom-left">Plantilla Basada en la obra de  <a href="http://themeforest.net/user/Ansimuz?ref=ansimuz">© 2011 Ansimuz.</a></div><a href="http://themeforest.net/user/Ansimuz?ref=ansimuz">
+
+		<!-- ENDS footer-bottom -->
+
+
+		
+	
+</a><iframe name="oauth2relay775173379" id="oauth2relay775173379" src="./Comunicación Serial con Pinguino_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

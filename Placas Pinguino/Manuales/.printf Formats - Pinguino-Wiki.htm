@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0050)http://wiki.pinguino.cc/index.php/*.printf_Formats -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta name="generator" content="MediaWiki 1.15.5-2squeeze6">
+		<meta name="keywords" content="*.printf Formats,CDC.printf,Lcd.printf,Lcdi2c.printf,Serial.printf">
+		<link rel="shortcut icon" href="http://wiki.pinguino.cc/favicon.ico">
+		<link rel="search" type="application/opensearchdescription+xml" href="http://wiki.pinguino.cc/opensearch_desc.php" title="Pinguino-Wiki (en)">
+		<link title="Creative Commons" type="application/rdf+xml" href="http://wiki.pinguino.cc/index.php?title=*.printf_Formats&action=creativecommons" rel="meta">
+		<link rel="copyright" href="http://creativecommons.org/licenses/by-sa/3.0/">
+		<link rel="alternate" type="application/rss+xml" title="Pinguino-Wiki RSS feed" href="http://wiki.pinguino.cc/index.php?title=Special:RecentChanges&feed=rss">
+		<link rel="alternate" type="application/atom+xml" title="Pinguino-Wiki Atom feed" href="http://wiki.pinguino.cc/index.php?title=Special:RecentChanges&feed=atom">
+		<title>*.printf Formats - Pinguino-Wiki</title>
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/shared.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/commonPrint.css" type="text/css" media="print">
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/main.css" type="text/css" media="screen">
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE50Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins/monobook/IE55Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins/monobook/IE60Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins/monobook/IE70Fixes.css?207" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/index.php" type="text/css">
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/index(1).php" type="text/css" media="print">
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/index(2).php" type="text/css">
+		<link rel="stylesheet" href="./.printf Formats - Pinguino-Wiki_files/index(3).php" type="text/css">
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?207"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+
+		<script type="text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins";
+		var wgArticlePath = "/index.php/$1";
+		var wgScriptPath = "";
+		var wgScript = "/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://wiki.pinguino.cc";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "*.printf_Formats";
+		var wgTitle = "*.printf Formats";
+		var wgAction = "view";
+		var wgArticleId = "619";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "en";
+		var wgContentLanguage = "en";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = 6699;
+		var wgVersion = "1.15.5-2squeeze6";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgSeparatorTransformTable = ["", ""];
+		var wgDigitTransformTable = ["", ""];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+
+		<script type="text/javascript" src="./.printf Formats - Pinguino-Wiki_files/wikibits.js"><!-- wikibits js --></script><style type="text/css">@import "/skins/monobook/KHTMLFixes.css";</style>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="./.printf Formats - Pinguino-Wiki_files/ajax.js"></script>
+<style type="text/css">/*<![CDATA[*/
+.source-c {line-height: normal;}
+.source-c li, .source-c pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for c
+ * CSS class: source-c, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.c.source-c .de1, .c.source-c .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.c.source-c  {font-family:monospace;}
+.c.source-c .imp {font-weight: bold; color: red;}
+.c.source-c li, .c.source-c .li1 {font-weight: normal; vertical-align:top;}
+.c.source-c .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.c.source-c .li2 {font-weight: bold; vertical-align:top;}
+.c.source-c .kw1 {color: #b1b100;}
+.c.source-c .kw2 {color: #000000; font-weight: bold;}
+.c.source-c .kw3 {color: #000066;}
+.c.source-c .kw4 {color: #993333;}
+.c.source-c .co1 {color: #666666; font-style: italic;}
+.c.source-c .co2 {color: #339933;}
+.c.source-c .coMULTI {color: #808080; font-style: italic;}
+.c.source-c .es0 {color: #000099; font-weight: bold;}
+.c.source-c .es1 {color: #000099; font-weight: bold;}
+.c.source-c .es2 {color: #660099; font-weight: bold;}
+.c.source-c .es3 {color: #660099; font-weight: bold;}
+.c.source-c .es4 {color: #660099; font-weight: bold;}
+.c.source-c .es5 {color: #006699; font-weight: bold;}
+.c.source-c .br0 {color: #009900;}
+.c.source-c .sy0 {color: #339933;}
+.c.source-c .st0 {color: #ff0000;}
+.c.source-c .nu0 {color: #0000dd;}
+.c.source-c .nu6 {color: #208080;}
+.c.source-c .nu8 {color: #208080;}
+.c.source-c .nu12 {color: #208080;}
+.c.source-c .nu16 {color:#800080;}
+.c.source-c .nu17 {color:#800080;}
+.c.source-c .nu18 {color:#800080;}
+.c.source-c .nu19 {color:#800080;}
+.c.source-c .me1 {color: #202020;}
+.c.source-c .me2 {color: #202020;}
+.c.source-c .ln-xtra, .c.source-c li.ln-xtra, .c.source-c div.ln-xtra {background-color: #ffc;}
+.c.source-c span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style>		<script type="text/javascript" src="./.printf Formats - Pinguino-Wiki_files/index(4).php"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-_printf_Formats skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 id="firstHeading" class="firstHeading">*.printf Formats</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From Pinguino-Wiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#column-one">navigation</a>, <a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tbody><tr><td><div id="toctitle"><h2>Contents</h2> <span class="toctoggle">[<a id="togglelink" class="internal" href="javascript:toggleToc()">hide</a>]</span></div>
+<ul>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Description"><span class="tocnumber">1</span> <span class="toctext">Description</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Specifiers"><span class="tocnumber">2</span> <span class="toctext">Specifiers</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Flags_.2F_Width"><span class="tocnumber">3</span> <span class="toctext">Flags / Width</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Escape_Sequences"><span class="tocnumber">4</span> <span class="toctext">Escape Sequences</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Zero_padding_and_field_width"><span class="tocnumber">5</span> <span class="toctext">Zero padding and field width</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Example"><span class="tocnumber">6</span> <span class="toctext">Example</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Bugs"><span class="tocnumber">7</span> <span class="toctext">Bugs</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#See_also"><span class="tocnumber">8</span> <span class="toctext">See also</span></a></li>
+<li class="toclevel-1"><a href="http://wiki.pinguino.cc/index.php/*.printf_Formats#Comments"><span class="tocnumber">9</span> <span class="toctext">Comments</span></a></li>
+</ul>
+</td></tr></tbody></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Description" id="Description"></a><h2> <span class="mw-headline"> Description </span></h2>
+<p>There are various *.printf() functions in Pinguino which use printf.c, an alternative implementation of the stdlib library (stdlib.c), to format data for output.  This new library provides simple and small printf functionality for use in embedded systems.
+</p><p>The functions that make use of the Pinguino printf.c library are&nbsp;:-
+</p>
+<table>
+<tbody><tr>
+<td width="150pt">
+<ul><li><a href="http://wiki.pinguino.cc/index.php/CDC.printf" title="CDC.printf">CDC.printf</a>
+</li></ul>
+</td><td width="150pt">
+<ul><li><a href="http://wiki.pinguino.cc/index.php/Lcdi2c.printf" title="Lcdi2c.printf">lcdi2c.printf</a>
+</li></ul>
+</td></tr>
+<tr>
+<td>
+<ul><li><a href="http://wiki.pinguino.cc/index.php/Lcd.printf" title="Lcd.printf">lcd.printf</a>
+</li></ul>
+</td><td>
+<ul><li><a href="http://wiki.pinguino.cc/index.php/Serial.printf" title="Serial.printf">Serial.printf</a>
+</li></ul>
+</td></tr></tbody></table>
+<p>The Pinguino printf.c library supports the following format specifiers/identifiers: 'd' 'u' 'b' 'o' 'c' 's' 'x' 'X' and 'f'.  Zero padding and field width are also supported.
+</p><p>The function makes use of a format string containing one or more format tags and other text to be included in the output.
+</p><p>The format tags take the form&nbsp;: <font face="Courier" size="2">%[flag][width]specifier</font>
+</p>
+<a name="Specifiers" id="Specifiers"></a><h2> <span class="mw-headline"> Specifiers </span></h2>
+<table style="background:#f6f6f6;">
+<tbody><tr>
+<td width="25pt">
+</td><td width="95pt">
+<p><i><b>Specifier</b></i>
+</p>
+</td><td width="350pt">
+<p><i><b>Sample Code</b></i>
+</p>
+</td><td>
+<p><i><b>Output</b></i>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>d'</b>
+</p>
+</td><td>
+<p><b>signed int</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%d\n", -128);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = -128</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>u'</b>
+</p>
+</td><td>
+<p><b>unsigned int</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%u\n", 1024);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = 1024</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>b'</b>
+</p>
+</td><td>
+<p><b>binary</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%b\n", 1024);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = 100000000000</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>o'</b>
+</p>
+</td><td>
+<p><b>octal</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%o\n", 1024);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = 2000</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>x'</b>
+</p>
+</td><td>
+<p><b>lower case hexadecimal</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%x\n", 8191);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = 0fff</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>X'</b>
+</p>
+</td><td>
+<p><b>upper case hexadecimal</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%x\n", 8191);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = 0FFF</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>c'</b>
+</p>
+</td><td>
+<p><b>ASCII character</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("c =&nbsp;%c\n", 65);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">c = A</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>s'</b>
+</p>
+</td><td>
+<p><b>string</b>
+</p>
+</td><td>
+<p><font face="Courier" size="1">Serial.printf("My name is&nbsp;%s, James Bond\n", "Bond");</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">My name is Bond, James Bond</font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>f'</b>
+</p>
+</td><td>
+<p><b>float</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("f =&nbsp;%f\n", 3.14);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">f = 3.14</font>
+</p>
+</td></tr></tbody></table>
+<a name="Flags_.2F_Width" id="Flags_.2F_Width"></a><h2> <span class="mw-headline"> Flags / Width </span></h2>
+<table style="background:#f6f6f6;">
+<tbody><tr>
+<td width="25pt">
+<p><br>
+</p>
+</td><td width="95pt">
+<p><i><b>Flag/Width</b></i>
+</p>
+</td><td width="350pt">
+<p><i><b>Example Code</b></i>
+</p>
+</td><td>
+<p><i><b>Output</b></i>
+</p>
+</td></tr>
+<tr>
+<td>
+</td><td>
+<p><b>(number) =<br>Right Justified</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%6dText\n", 128);<br>Serial.printf("i =&nbsp;%6dText\n", -128);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2"><code>i = ___128Text</code><br><code>i = __-128Text</code></font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>-'</b>
+</p>
+</td><td>
+<p><b>- (number) =<br>Left Justified</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%-6dText\n", 128);<br>Serial.printf("i =&nbsp;%-6dText\n", -128);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2"><code>i = 128___Text</code><br><code>i = -128__Text</code></font>
+</p>
+</td></tr>
+<tr>
+<td>
+<p>'<b>0'</b>
+</p>
+</td><td>
+<p><b>0 (number) =<br>Zero Padding</b>
+</p>
+</td><td>
+<p><font face="Courier" size="2">Serial.printf("i =&nbsp;%06d\n", 128)<br>Serial.printf("i =&nbsp;%06d\n", -128);</font>
+</p>
+</td><td>
+<p><font face="Courier" size="2">i = 000128<br>i = -00128</font>
+</p>
+</td></tr></tbody></table>
+<a name="Escape_Sequences" id="Escape_Sequences"></a><h2> <span class="mw-headline"> Escape Sequences </span></h2>
+<p>Certain output devices, e.g. CDC and serial, also support non-printing characters such as [carriage return] and [new line] by including the appropriate "escape" sequences in the format string.
+</p>
+<pre>\n = new line
+\r = carriage return
+</pre>
+<a name="Zero_padding_and_field_width" id="Zero_padding_and_field_width"></a><h2> <span class="mw-headline"> Zero padding and field width </span></h2>
+<p>See example below.
+</p>
+<a name="Example" id="Example"></a><h2> <span class="mw-headline"> Example </span></h2>
+<div dir="ltr" style="text-align: left;"><div class="c source-c" style="font-family:monospace;"><pre class="de1"><span class="kw4">char</span> <span class="sy0">*</span><span class="kw4">string</span> <span class="sy0">=</span> <span class="st0">"Hello world!"</span><span class="sy0">;</span>
+<span class="kw4">char</span> c <span class="sy0">=</span> <span class="nu0">65</span><span class="sy0">;</span>
+<span class="kw4">int</span> i <span class="sy0">=</span> <span class="nu0">333</span><span class="sy0">;</span>
+<span class="kw4">long</span> l <span class="sy0">=</span> <span class="nu0">115200</span><span class="sy0">;</span>
+<span class="kw4">float</span> f <span class="sy0">=</span> <span class="nu16">3.14159265</span><span class="sy0">;</span> <span class="co1">// floating point support is not yet implemented in printf</span>
+&nbsp;
+<span class="kw4">void</span> setup<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+	Serial.<span class="me1">begin</span><span class="br0">(</span>9600<span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span>
+&nbsp;
+&nbsp;
+<span class="kw4">void</span> loop<span class="br0">(</span><span class="br0">)</span>
+<span class="br0">{</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"**************************<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"*** Serial Printf Demo ***<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"**************************<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"string =&nbsp;%s<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="kw4">string</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"character = <span class="es1">\"</span>%c<span class="es1">\"</span><span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> c<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"signed char =&nbsp;%d / unsigned char =&nbsp;%u<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">-</span>c<span class="sy0">,</span> <span class="sy0">-</span>c<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"signed int =&nbsp;%d / unsigned int =&nbsp;%u<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">-</span>i<span class="sy0">,</span> <span class="sy0">-</span>i<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"signed long =&nbsp;%d / unsigned long =&nbsp;%u<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">-</span>l<span class="sy0">,</span> <span class="sy0">-</span>l<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"decimal[%d] = hexa[0x%X] = binary[0b%016b] = octal[%o]<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> i<span class="sy0">,</span> i<span class="sy0">,</span> i<span class="sy0">,</span> i<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"float =&nbsp;%f<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> f<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"justif: <span class="es1">\"</span>%-10s<span class="es1">\"</span><span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="st0">"left"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"justif: <span class="es1">\"</span>%10s<span class="es1">\"</span><span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="st0">"right"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">" 3:&nbsp;%04d zero padded<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> 3<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">" 3:&nbsp;%-4d left justif.<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> 3<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">" 3:&nbsp;%4d right justif.<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> 3<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"-3:&nbsp;%04d zero padded<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">-</span>3<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"-3:&nbsp;%-4d left justif.<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">-</span>3<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"-3:&nbsp;%4d right justif.<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="sy0">,</span> <span class="sy0">-</span>3<span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="kw3">printf</span><span class="br0">(</span><span class="st0">"Press Any Key to continue ...<span class="es1">\r</span><span class="es1">\n</span>"</span><span class="br0">)</span><span class="sy0">;</span>
+	Serial.<span class="me1">getkey</span><span class="br0">(</span><span class="br0">)</span><span class="sy0">;</span>
+<span class="br0">}</span></pre></div></div>
+<a name="Bugs" id="Bugs"></a><h2> <span class="mw-headline"> Bugs </span></h2>
+<a name="See_also" id="See_also"></a><h2> <span class="mw-headline"> See also </span></h2>
+<a name="Comments" id="Comments"></a><h2> <span class="mw-headline"> Comments </span></h2>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 38/1000000
+Post-expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key pinguino:pcache:idhash:619-0!1!0!!en!2!edit=0 and timestamp 20140502195409 -->
+<div class="printfooter">
+Retrieved from "<a href="./.printf Formats - Pinguino-Wiki_files/.printf Formats - Pinguino-Wiki.htm">http://wiki.pinguino.cc/index.php/*.printf_Formats</a>"</div>
+			<div id="catlinks" class="catlinks"><div id="mw-normal-catlinks"><a href="http://wiki.pinguino.cc/index.php/Special:Categories" title="Special:Categories">Category</a>: <span dir="ltr"><a href="http://wiki.pinguino.cc/index.php/Category:Functions" title="Category:Functions">Functions</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="./.printf Formats - Pinguino-Wiki_files/.printf Formats - Pinguino-Wiki.htm" title="View the content page [alt-c]" accesskey="c">Page</a></li>
+				 <li id="ca-talk"><a href="http://wiki.pinguino.cc/index.php/Talk:*.printf_Formats" title="Discussion about the content page [alt-t]" accesskey="t">Discussion</a></li>
+				 <li id="ca-viewsource"><a href="http://wiki.pinguino.cc/index.php?title=*.printf_Formats&action=edit" title="This page is protected.
+You can view its source [alt-e]" accesskey="e">View source</a></li>
+				 <li id="ca-history"><a href="http://wiki.pinguino.cc/index.php?title=*.printf_Formats&action=history" title="Past revisions of this page [alt-h]" accesskey="h">History</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="http://wiki.pinguino.cc/index.php?title=Special:UserLogin&returnto=*.printf_Formats" title="You are encouraged to log in; however, it is not mandatory [alt-o]" accesskey="o">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/logo_pinguino.png);" href="http://wiki.pinguino.cc/index.php/Main_Page" title="Visit the main page [alt-z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class="pBody">
+			<ul>
+				<li id="n-Main-Site"><a href="http://www.pinguino.cc/">Main Site</a></li>
+				<li id="n-mainpage"><a href="http://wiki.pinguino.cc/index.php/Main_Page" title="Visit the main page">Main Page</a></li>
+				<li id="n-Recentchanges"><a href="http://wiki.pinguino.cc/index.php/Special:RecentChanges">Recent changes</a></li>
+				<li id="n-Wiki-Help"><a href="http://wiki.pinguino.cc/index.php/Help:Contents">Wiki Help</a></li>
+				<li id="n-Functions"><a href="http://wiki.pinguino.cc/index.php/Category:Functions">Functions</a></li>
+				<li id="n-Libraries"><a href="http://wiki.pinguino.cc/index.php/Category:Libraries">Libraries</a></li>
+				<li id="n-Examples"><a href="http://wiki.pinguino.cc/index.php/Category:Examples">Examples</a></li>
+				<li id="n-Downloads"><a href="http://wiki.pinguino.cc/index.php/Category:Downloads">Downloads</a></li>
+				<li id="n-Pinguino-Shop"><a href="http://shop.pinguino.cc/">Pinguino Shop</a></li>
+				<li id="n-Contacts"><a href="http://wiki.pinguino.cc/index.php/Contacts">Contacts</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="http://wiki.pinguino.cc/index.php" id="searchform"><div>
+				<input type="hidden" name="title" value="Special:Search">
+				<input id="searchInput" name="search" type="text" title="Search Pinguino-Wiki [alt-f]" accesskey="f" value="">
+				<input type="submit" name="go" class="searchButton" id="searchGoButton" value="Go" title="Go to a page with this exact name if exists">&nbsp;
+				<input type="submit" name="fulltext" class="searchButton" id="mw-searchButton" value="Search" title="Search the pages for this text">
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="http://wiki.pinguino.cc/index.php/Special:WhatLinksHere/*.printf_Formats" title="List of all wiki pages that link here [alt-j]" accesskey="j">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="http://wiki.pinguino.cc/index.php/Special:RecentChangesLinked/*.printf_Formats" title="Recent changes in pages linked from this page [alt-k]" accesskey="k">Related changes</a></li>
+<li id="t-specialpages"><a href="http://wiki.pinguino.cc/index.php/Special:SpecialPages" title="List of all special pages [alt-q]" accesskey="q">Special pages</a></li>
+				<li id="t-print"><a href="http://wiki.pinguino.cc/index.php?title=*.printf_Formats&printable=yes" rel="alternate" title="Printable version of this page [alt-p]" accesskey="p">Printable version</a></li>				<li id="t-permalink"><a href="http://wiki.pinguino.cc/index.php?title=*.printf_Formats&oldid=6699" title="Permanent link to this revision of the page">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="./.printf Formats - Pinguino-Wiki_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki"></a></div>
+				<div id="f-copyrightico"><a href="http://creativecommons.org/licenses/by-sa/3.0/"><img src="./.printf Formats - Pinguino-Wiki_files/88x31.png" alt="Attribution-Share Alike 3.0 Unported"></a></div>
+			<ul id="f-list">
+					<li id="lastmod"> This page was last modified on 8 January 2014, at 10:31.</li>
+					<li id="viewcount">This page has been accessed 1,744 times.</li>
+					<li id="copyright">Content is available under <a href="http://creativecommons.org/licenses/by-sa/3.0/" class="external " title="http://creativecommons.org/licenses/by-sa/3.0/">Attribution-Share Alike 3.0 Unported</a>.</li>
+					<li id="privacy"><a href="http://wiki.pinguino.cc/index.php/Pinguino-Wiki:Privacy_policy" title="Pinguino-Wiki:Privacy policy">Privacy policy</a></li>
+					<li id="about"><a href="http://wiki.pinguino.cc/index.php/Pinguino-Wiki:About" title="Pinguino-Wiki:About">About Pinguino-Wiki</a></li>
+					<li id="disclaimer"><a href="http://wiki.pinguino.cc/index.php/Pinguino-Wiki:General_disclaimer" title="Pinguino-Wiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served in 0.260 secs. -->
+</body></html>
